@@ -11,10 +11,6 @@ const faqs = [
     answer: "Check-in time is 2:00 PM and check-out time is 11:00 AM. Early check-in and late check-out are subject to availability and may incur additional charges.",
   },
   {
-    question: "How far is the hotel from major attractions?",
-    answer: "Our hotel is centrally located in Kasauli. Most major attractions like Christ Church, Monkey Point, and Mall Road are within 1-4 km and easily accessible.",
-  },
-  {
     question: "Do you provide airport/railway station pickup?",
     answer: "Yes, we provide complimentary pickup from Kalka Railway Station (40 km) and Chandigarh Airport (65 km) for bookings of 3 nights or more. Additional charges apply for shorter stays.",
   },
