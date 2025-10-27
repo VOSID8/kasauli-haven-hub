@@ -1,4 +1,4 @@
-import { Wifi, Coffee, Car, Utensils, Wind, Shield } from "lucide-react";
+import { Wifi, Coffee, Car, Utensils, Trophy, Shield } from "lucide-react";
 
 const amenities = [
   {
@@ -22,9 +22,9 @@ const amenities = [
     description: "Round-the-clock service for your comfort",
   },
   {
-    icon: Wind,
-    title: "Spa & Wellness",
-    description: "Rejuvenating treatments and massages",
+    icon: Trophy,
+    title: "Games & Recreation",
+    description: "Badminton, carrom, board games and more",
   },
   {
     icon: Shield,

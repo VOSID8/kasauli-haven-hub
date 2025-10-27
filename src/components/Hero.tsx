@@ -18,15 +18,12 @@ const Hero = () => {
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
-          Welcome to Paradise
+          Welcome to Pine Needles
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-foreground/90 max-w-2xl mx-auto">
-          Experience luxury and tranquility in the heart of Kasauli's misty mountains
+          Experience comfort and tranquility in the heart of Kasauli's misty mountains
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" onClick={scrollToContact}>
-            Book Your Stay
-          </Button>
           <Button
             size="lg"
             variant="outline"
