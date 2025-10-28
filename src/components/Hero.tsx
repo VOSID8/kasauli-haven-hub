@@ -1,20 +1,44 @@
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-hotel.jpg";
+import standardRoom from "@/assets/standard-room.jpg";
+import deluxeRoom from "@/assets/deluxe-room.jpg";
+import suiteRoom from "@/assets/suite-room.jpg";
+
+const heroImages = [heroImage, standardRoom, deluxeRoom, suiteRoom];
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+      <Carousel
+        className="absolute inset-0"
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background"></div>
-      </div>
+        <CarouselContent>
+          {heroImages.map((image, index) => (
+            <CarouselItem key={index}>
+              <div
+                className="h-screen bg-cover bg-center"
+                style={{ backgroundImage: `url(${image})` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background"></div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">

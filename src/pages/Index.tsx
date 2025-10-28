@@ -7,6 +7,7 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
+import GalleryDialog from "@/components/GalleryDialog";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <Contact />
       <Footer />
       <FloatingContactButton />
+      <GalleryDialog />
     </div>
   );
 };
