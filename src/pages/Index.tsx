@@ -4,10 +4,10 @@ import Rooms from "@/components/Rooms";
 import Attractions from "@/components/Attractions";
 import Amenities from "@/components/Amenities";
 import FAQ from "@/components/FAQ";
+import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
-import FloatingGalleryButton from "@/components/FloatingGalleryButton";
 
 const Index = () => {
   return (
@@ -18,10 +18,10 @@ const Index = () => {
       <Attractions />
       <Amenities />
       <FAQ />
+      <Gallery />
       <Contact />
       <Footer />
       <FloatingContactButton />
-      <FloatingGalleryButton />
     </div>
   );
 };

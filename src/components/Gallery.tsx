@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-hotel.jpg";
 import standardRoom from "@/assets/standard-room.jpg";
 import deluxeRoom from "@/assets/deluxe-room.jpg";
 import suiteRoom from "@/assets/suite-room.jpg";
+import { Button } from "@/components/ui/button";
 
 const galleryImages = [
   { src: heroImage, alt: "Pine Needles Hotel Exterior", category: "Exterior" },
@@ -15,25 +13,18 @@ const galleryImages = [
 ];
 
 const Gallery = () => {
-  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-background pt-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex items-center justify-between mb-8">
-          <Button
-            variant="ghost"
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back
-          </Button>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-            Hotel Gallery
-          </h1>
-          <div className="w-20"></div> {/* Spacer for centering */}
+    <section id="gallery" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Gallery
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Explore our beautiful hotel and rooms
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -87,7 +78,7 @@ const Gallery = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

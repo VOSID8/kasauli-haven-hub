@@ -1,20 +1,14 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const isGalleryPage = location.pathname === "/gallery";
 
   const scrollToSection = (id: string) => {
-    if (isGalleryPage) {
-      window.location.href = `/#${id}`;
-    } else {
-      const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: "smooth" });
-    }
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
 
@@ -45,9 +39,9 @@ const Navbar = () => {
             <Button variant="ghost" onClick={() => scrollToSection("faq")}>
               FAQs
             </Button>
-            <Link to="/gallery">
-              <Button variant="ghost">Gallery</Button>
-            </Link>
+            <Button variant="ghost" onClick={() => scrollToSection("gallery")}>
+              Gallery
+            </Button>
             <Button variant="ghost" onClick={() => scrollToSection("contact")}>
               Contact
             </Button>
@@ -93,14 +87,13 @@ const Navbar = () => {
             >
               FAQs
             </Button>
-            <Link to="/gallery" className="w-full">
-              <Button
-                variant="ghost"
-                className="w-full justify-start"
-              >
-                Gallery
-              </Button>
-            </Link>
+            <Button
+              variant="ghost"
+              className="w-full justify-start"
+              onClick={() => scrollToSection("gallery")}
+            >
+              Gallery
+            </Button>
             <Button
               variant="ghost"
               className="w-full justify-start"
