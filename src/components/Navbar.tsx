@@ -1,13 +1,20 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isGalleryPage = location.pathname === "/gallery";
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (isGalleryPage) {
+      window.location.href = `/#${id}`;
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
     setIsOpen(false);
   };
 
@@ -15,14 +22,14 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">PN</span>
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Pine Needles
             </h1>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-1">
@@ -38,6 +45,9 @@ const Navbar = () => {
             <Button variant="ghost" onClick={() => scrollToSection("faq")}>
               FAQs
             </Button>
+            <Link to="/gallery">
+              <Button variant="ghost">Gallery</Button>
+            </Link>
             <Button variant="ghost" onClick={() => scrollToSection("contact")}>
               Contact
             </Button>
@@ -83,6 +93,14 @@ const Navbar = () => {
             >
               FAQs
             </Button>
+            <Link to="/gallery" className="w-full">
+              <Button
+                variant="ghost"
+                className="w-full justify-start"
+              >
+                Gallery
+              </Button>
+            </Link>
             <Button
               variant="ghost"
               className="w-full justify-start"
