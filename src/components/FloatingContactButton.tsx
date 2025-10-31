@@ -56,6 +56,20 @@ const FloatingContactButton = () => {
               <p className="text-sm text-muted-foreground">info@pineneedles.com</p>
             </div>
           </div>
+          <a 
+            href="https://wa.me/911234567890" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-start space-x-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+          >
+            <div className="p-2 rounded-lg bg-primary/10">
+              <MessageCircle className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h4 className="font-semibold mb-1">WhatsApp</h4>
+              <p className="text-sm text-muted-foreground">+91 1234 567890</p>
+            </div>
+          </a>
         </div>
       </DialogContent>
     </Dialog>

@@ -33,7 +33,7 @@ const Hero = () => {
                 className="h-screen bg-cover bg-center"
                 style={{ backgroundImage: `url(${image})` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" style={{ opacity: index === 0 ? 0 : 1 }}></div>
               </div>
             </CarouselItem>
           ))}
@@ -41,11 +41,11 @@ const Hero = () => {
       </Carousel>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
+        <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
           Welcome to Pine Needles
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-foreground/90 max-w-2xl mx-auto">
-          Experience comfort and tranquility in the heart of Kasauli's misty mountains
+        <p className="text-2xl md:text-3xl mb-8 text-foreground font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] max-w-2xl mx-auto">
+          Comfort in Kasauli's Mountains
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
