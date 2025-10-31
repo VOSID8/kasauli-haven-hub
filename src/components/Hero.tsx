@@ -41,11 +41,11 @@ const Hero = () => {
       </Carousel>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="inline-block bg-background/70 backdrop-blur-sm rounded-lg px-8 py-4 shadow-lg border border-border/30 mb-8">
-          <h1 className="font-cinzel text-5xl md:text-7xl font-bold mb-2 text-foreground">
+        <div className="inline-block bg-background/60 backdrop-blur-sm rounded-lg px-6 py-3 shadow-lg border border-border/20 mb-8">
+          <h1 className="font-cinzel text-4xl md:text-6xl font-bold mb-1 text-foreground">
             Welcome to Pine Needles
           </h1>
-          <p className="font-playfair text-xl md:text-2xl text-foreground/90">
+          <p className="font-playfair text-lg md:text-xl text-foreground/90">
             Comfort in Kasauli's Mountains
           </p>
         </div>
