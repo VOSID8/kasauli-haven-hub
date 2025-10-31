@@ -40,24 +40,26 @@ const Hero = () => {
         </CarouselContent>
       </Carousel>
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-          Welcome to Pine Needles
-        </h1>
-        <p className="text-2xl md:text-3xl mb-8 text-foreground font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] max-w-2xl mx-auto">
-          Comfort in Kasauli's Mountains
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-background/80 backdrop-blur-sm"
-            onClick={() =>
-              document.getElementById("rooms")?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Explore Rooms
-          </Button>
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <div className="bg-background/90 backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-2xl border border-border/50">
+          <h1 className="font-cinzel text-5xl md:text-7xl font-bold mb-4 text-foreground">
+            Welcome to Pine Needles
+          </h1>
+          <p className="font-playfair text-xl md:text-2xl text-foreground/90 max-w-2xl mx-auto">
+            Comfort in Kasauli's Mountains
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-background/80 backdrop-blur-sm"
+              onClick={() =>
+                document.getElementById("rooms")?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Explore Rooms
+            </Button>
+          </div>
         </div>
       </div>
     </section>
